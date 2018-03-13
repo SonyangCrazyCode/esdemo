@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="base.js"></script>
+        <script type="text/ecmascript">
+        var t1=new test();
+        
+        console.log(t1.a,t1.toString(),t1.func(t1));
+        
+        let a= new test();
+        console.log(a.func(t1));
+
+        function fun1()
+        {
+            return "fun1";
+        }
+        console.log(fun1());
+
+        const a1=a;
+        a1.a=100;
+        console.log(a1);
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+</html>
