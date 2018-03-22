@@ -2,18 +2,55 @@
     <head>
         <script src="base.js"></script>
         <script type="text/ecmascript">
-        var dog1=new dog("dog1");
-        let ps= ['tom','mary'];
-        console.log(dog1,dog1.say(),dog1.helpPerson(...ps));
 
-        const dog2=dog1;
-        dog2.age=2;
-        dog2.name="dog2";
-        console.log(dog2,dog2.say());
+        //数组解构
+        function ArrayDestructuring()
+        {
+           let [ first, , third] = ["foo", "bar", "baz"];
+           let [head, ...tail] = [1, 2, 3, 4,5];
+       
+           console.log(first,third,tail);
+           
+           let [n1, n2, n3, n4, n5, n6] = fibs();
+           console.log(n1, n2, n3, n4, n5, n6);
+
+        }
+
+        function* fibs() 
+        {
+            let a = 0;
+            let b = 1;
+            while (true) {
+                console.log(a,b);
+                yield a;
+                [a, b] = [b, a + b];
+                //console.log(a,b);
+               
+            }
+
+        }
+
+        
+
+        function classDemo()
+        {
+            var dog1=new dog("dog1");
+            let ps= ['tom','mary'];
+            console.log(dog1,dog1.say(),dog1.helpPerson(...ps));
+
+            const dog2=dog1;
+            dog2.age=2;
+            dog2.name="dog2";
+            console.log(dog2,dog2.say());
+        }
+
+        ArrayDestructuring();
         </script>
     </head>
 
-    <body>
-        
+    <body onload="classDemo()">
+        <div id="result">
+                
+        </div>
     </body>
 </html>
